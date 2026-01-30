@@ -1,51 +1,48 @@
-import { useEffect } from "react";
 import "@/App.css";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
-import axios from "axios";
+import { Toaster } from "@/components/ui/sonner";
 
-const BACKEND_URL = process.env.REACT_APP_BACKEND_URL;
-const API = `${BACKEND_URL}/api`;
+// Layout
+import Header from "@/components/layout/Header";
+import Footer from "@/components/layout/Footer";
+import LiveChat from "@/components/layout/LiveChat";
 
-const Home = () => {
-  const helloWorldApi = async () => {
-    try {
-      const response = await axios.get(`${API}/`);
-      console.log(response.data.message);
-    } catch (e) {
-      console.error(e, `errored out requesting / api`);
-    }
-  };
-
-  useEffect(() => {
-    helloWorldApi();
-  }, []);
-
-  return (
-    <div>
-      <header className="App-header">
-        <a
-          className="App-link"
-          href="https://emergent.sh"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <img src="https://avatars.githubusercontent.com/in/1201222?s=120&u=2686cf91179bbafbc7a71bfbc43004cf9ae1acea&v=4" />
-        </a>
-        <p className="mt-5">Building something incredible ~!</p>
-      </header>
-    </div>
-  );
-};
+// Pages
+import Home from "@/pages/Home";
+import Products from "@/pages/Products";
+import DeviceShield from "@/pages/products/DeviceShield";
+import RiskIntelligence from "@/pages/products/RiskIntelligence";
+import ComplianceAudit from "@/pages/products/ComplianceAudit";
+import ThreatResponse from "@/pages/products/ThreatResponse";
+import Solutions from "@/pages/Solutions";
+import HowItWorks from "@/pages/HowItWorks";
+import About from "@/pages/About";
+import Contact from "@/pages/Contact";
+import Blog from "@/pages/Blog";
 
 function App() {
   return (
-    <div className="App">
+    <div className="App min-h-screen flex flex-col">
       <BrowserRouter>
-        <Routes>
-          <Route path="/" element={<Home />}>
-            <Route index element={<Home />} />
-          </Route>
-        </Routes>
+        <Header />
+        <main className="flex-1">
+          <Routes>
+            <Route path="/" element={<Home />} />
+            <Route path="/products" element={<Products />} />
+            <Route path="/products/device-shield" element={<DeviceShield />} />
+            <Route path="/products/risk-intelligence" element={<RiskIntelligence />} />
+            <Route path="/products/compliance-audit" element={<ComplianceAudit />} />
+            <Route path="/products/threat-response" element={<ThreatResponse />} />
+            <Route path="/solutions" element={<Solutions />} />
+            <Route path="/how-it-works" element={<HowItWorks />} />
+            <Route path="/about" element={<About />} />
+            <Route path="/contact" element={<Contact />} />
+            <Route path="/blog" element={<Blog />} />
+          </Routes>
+        </main>
+        <Footer />
+        <LiveChat />
+        <Toaster position="top-right" />
       </BrowserRouter>
     </div>
   );
