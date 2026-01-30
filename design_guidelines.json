@@ -1,0 +1,167 @@
+{
+  "design_system": {
+    "typography": {
+      "font_family": {
+        "heading": "Outfit, sans-serif",
+        "body": "Inter, sans-serif",
+        "mono": "JetBrains Mono, monospace"
+      },
+      "scale": {
+        "h1": "text-5xl md:text-7xl font-bold tracking-tight leading-tight",
+        "h2": "text-4xl md:text-5xl font-semibold tracking-tight",
+        "h3": "text-2xl md:text-3xl font-semibold tracking-normal",
+        "body_large": "text-lg md:text-xl leading-relaxed text-slate-600 dark:text-slate-300",
+        "body_base": "text-base leading-relaxed text-slate-600 dark:text-slate-300",
+        "caption": "text-sm font-medium text-slate-500 uppercase tracking-wider"
+      },
+      "imports": [
+        "https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=JetBrains+Mono:wght@400;500&family=Outfit:wght@400;500;600;700;800&display=swap"
+      ]
+    },
+    "colors": {
+      "palette": {
+        "primary": {
+          "DEFAULT": "#0F172A",
+          "foreground": "#F8FAFC",
+          "hover": "#1E293B"
+        },
+        "secondary": {
+          "DEFAULT": "#334155",
+          "foreground": "#F8FAFC"
+        },
+        "accent": {
+          "DEFAULT": "#0EA5E9",
+          "foreground": "#FFFFFF",
+          "glow": "0 0 20px rgba(14, 165, 233, 0.5)"
+        },
+        "background": {
+          "light": "#FFFFFF",
+          "dark": "#020617",
+          "subtle": "#F8FAFC"
+        },
+        "surface": {
+          "light": "#FFFFFF",
+          "dark": "#0F172A",
+          "glass_light": "rgba(255, 255, 255, 0.7)",
+          "glass_dark": "rgba(15, 23, 42, 0.7)"
+        },
+        "border": {
+          "light": "#E2E8F0",
+          "dark": "#1E293B"
+        }
+      },
+      "usage": {
+        "hero_section": "bg-slate-950 text-white",
+        "feature_section": "bg-white text-slate-900",
+        "cta_section": "bg-slate-900 text-white",
+        "footer": "bg-slate-950 text-slate-400"
+      }
+    },
+    "layout": {
+      "container": "max-w-7xl mx-auto px-4 sm:px-6 lg:px-8",
+      "section_spacing": "py-24 md:py-32",
+      "grid_gap": "gap-8 md:gap-12",
+      "border_radius": {
+        "default": "rounded-lg",
+        "button": "rounded-md",
+        "card": "rounded-xl"
+      }
+    },
+    "components": {
+      "buttons": {
+        "primary": "bg-accent hover:bg-accent/90 text-white font-semibold px-8 py-4 rounded-md transition-all duration-300 shadow-[0_0_20px_rgba(14,165,233,0.3)] hover:shadow-[0_0_30px_rgba(14,165,233,0.5)]",
+        "secondary": "bg-white/10 hover:bg-white/20 text-white border border-white/20 font-medium px-8 py-4 rounded-md backdrop-blur-sm transition-all",
+        "outline": "border-2 border-slate-200 hover:border-slate-900 text-slate-900 font-medium px-8 py-4 rounded-md transition-all"
+      },
+      "cards": {
+        "feature": "bg-white p-8 rounded-xl border border-slate-100 shadow-lg hover:shadow-xl transition-all duration-300 hover:-translate-y-1 group",
+        "dark_feature": "bg-slate-900/50 p-8 rounded-xl border border-slate-800 backdrop-blur-md hover:border-accent/50 transition-all duration-300"
+      },
+      "inputs": {
+        "default": "bg-white border border-slate-200 rounded-md px-4 py-3 focus:ring-2 focus:ring-accent focus:border-transparent outline-none transition-all w-full"
+      }
+    },
+    "visual_enhancers": {
+      "gradients": {
+        "hero_glow": "bg-gradient-to-tr from-accent/20 via-slate-900 to-slate-950",
+        "text_gradient": "bg-clip-text text-transparent bg-gradient-to-r from-white to-slate-400"
+      },
+      "shadows": {
+        "glow": "shadow-[0_0_40px_-10px_rgba(14,165,233,0.3)]",
+        "glass": "shadow-[0_8px_32px_0_rgba(31,38,135,0.37)]"
+      },
+      "textures": {
+        "grid": "bg-[linear-gradient(to_right,#80808012_1px,transparent_1px),linear-gradient(to_bottom,#80808012_1px,transparent_1px)] bg-[size:24px_24px]"
+      }
+    },
+    "motion": {
+      "default_transition": "transition-all duration-300 ease-in-out",
+      "hover_scale": "hover:scale-[1.02]",
+      "fade_in_up": {
+        "initial": { "opacity": 0, "y": 20 },
+        "animate": { "opacity": 1, "y": 0 },
+        "transition": { "duration": 0.5 }
+      }
+    }
+  },
+  "assets": {
+    "images": {
+      "hero_bg": {
+        "url": "https://images.unsplash.com/photo-1628939824352-baa1cdddeb6b?crop=entropy&cs=srgb&fm=jpg&q=85",
+        "alt": "Abstract Cyberpunk Blue Light Security Background",
+        "usage": "Hero section background with heavy overlay (opacity-90)"
+      },
+      "server_room": {
+        "url": "https://images.unsplash.com/photo-1506399558188-acca6f8cbf41?crop=entropy&cs=srgb&fm=jpg&q=85",
+        "alt": "Secure Data Center Server Room",
+        "usage": "Infrastructure or Technology section"
+      },
+      "office_meeting": {
+        "url": "https://images.pexels.com/photos/7108268/pexels-photo-7108268.jpeg",
+        "alt": "Modern Corporate Security Team Meeting",
+        "usage": "About Us or Careers section"
+      },
+      "abstract_tech": {
+        "url": "https://images.unsplash.com/photo-1739054730201-4b6463484e3c?crop=entropy&cs=srgb&fm=jpg&q=85",
+        "alt": "Abstract Blue Processor 3D Render",
+        "usage": "Product features or background elements"
+      }
+    },
+    "icons": {
+      "library": "lucide-react",
+      "style": "Stroke width 1.5px, size 24px or 32px"
+    }
+  },
+  "page_strategies": {
+    "home": {
+      "structure": [
+        "Hero: Dark Navy, 'Secure Your Enterprise Future', CTA: 'Request Demo'",
+        "Logos: 'Trusted by' (Grayscale opacity-50)",
+        "Problem/Agitation: 'The Attack Surface is Growing' (White bg)",
+        "Solution/Value: 3-Step Process (Bento Grid)",
+        "Products: Cards with 'Tracing Beam' effect",
+        "CTA: 'Ready to secure your infrastructure?' (Dark Navy)"
+      ]
+    },
+    "products": {
+      "layout": "Grid of cards, each linking to detail page. Use abstract tech images as card headers."
+    },
+    "product_detail": {
+      "layout": "Sticky sidebar nav for long content. Deep dive into features. Use 'Check' icons for capabilities."
+    },
+    "contact": {
+      "layout": "Split screen. Left: Contact Info & Trust signals. Right: Multi-step form."
+    }
+  },
+  "universal_guidelines": [
+    "Use 'Outfit' font for all headings to give a modern tech feel.",
+    "Use 'Inter' for body text for maximum readability.",
+    "Primary CTA buttons must always be the 'Accent' color (#0EA5E9) or White on dark backgrounds.",
+    "Never use pure black (#000000). Use Slate-950 (#020617) for dark backgrounds.",
+    "Add 'data-testid' to all interactive elements.",
+    "Use the 'grid' texture background on white sections to add technical depth.",
+    "Ensure all forms have proper validation and error states.",
+    "Use 'sonner' for toast notifications.",
+    "Implement 'lucide-react' icons for all UI iconography."
+  ]
+}
