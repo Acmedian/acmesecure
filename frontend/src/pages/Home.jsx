@@ -12,7 +12,9 @@ import {
   Factory,
   ChevronRight,
   Check,
-  ArrowRight
+  ArrowRight,
+  BarChart3,
+  Lock
 } from "lucide-react";
 
 const Home = () => {
@@ -39,28 +41,30 @@ const Home = () => {
 
   const products = [
     {
-      name: "Device Shield",
-      description: "Endpoint and device-level protection with continuous posture monitoring.",
-      href: "/products/device-shield",
+      name: "AcmeSecure Resilience",
+      tagline: "Continuous cyber risk and exposure management for enterprise environments.",
+      href: "/products/resilience",
+      icon: BarChart3,
+      capabilities: [
+        "Asset, device, and user risk identification",
+        "Continuous exposure measurement",
+        "Centralized risk scoring and prioritization",
+        "Executive-ready security posture visibility",
+      ],
+      cta: "Explore Resilience",
+    },
+    {
+      name: "AcmeSecure Aegis",
+      tagline: "Protection, enforcement, and response that operationalizes risk reduction.",
+      href: "/products/aegis",
       icon: Shield,
-    },
-    {
-      name: "Risk Intelligence",
-      description: "Centralized risk scoring and exposure tracking across all assets.",
-      href: "/products/risk-intelligence",
-      icon: Activity,
-    },
-    {
-      name: "Compliance & Audit",
-      description: "Continuous compliance monitoring with audit-ready reporting.",
-      href: "/products/compliance-audit",
-      icon: Check,
-    },
-    {
-      name: "Threat Response",
-      description: "Incident detection support with risk-based prioritization.",
-      href: "/products/threat-response",
-      icon: Target,
+      capabilities: [
+        "Device and endpoint protection",
+        "Policy enforcement and configuration control",
+        "Risk-driven remediation guidance",
+        "Incident detection and response enablement",
+      ],
+      cta: "Explore Aegis",
     },
   ];
 
@@ -157,15 +161,15 @@ const Home = () => {
         </div>
       </section>
 
-      {/* Products Section */}
+      {/* Products Section - 2 Platform Strategy */}
       <section className="bg-slate-50 py-24" data-testid="products-section">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
             <h2 className="font-heading text-3xl md:text-4xl font-semibold text-slate-900 mb-4">
-              Our Product Suite
+              Two Platforms. Complete Coverage.
             </h2>
             <p className="text-lg text-slate-600 max-w-2xl mx-auto">
-              Modular security solutions designed to work together for comprehensive risk reduction.
+              A unified approach to enterprise security: understand your risk with Resilience, then protect and respond with Aegis.
             </p>
           </div>
 
@@ -179,16 +183,27 @@ const Home = () => {
               >
                 <Card className="h-full bg-white border-slate-100 shadow-lg hover:shadow-xl transition-all duration-300 hover:-translate-y-1 group-hover:border-sky-200">
                   <CardContent className="p-8">
-                    <div className="w-12 h-12 rounded-lg bg-slate-900 flex items-center justify-center mb-6 group-hover:bg-sky-500 transition-colors">
-                      <product.icon className="h-6 w-6 text-white" />
+                    <div className="w-14 h-14 rounded-xl bg-slate-900 flex items-center justify-center mb-6 group-hover:bg-sky-500 transition-colors">
+                      <product.icon className="h-7 w-7 text-white" />
                     </div>
-                    <h3 className="font-heading text-xl font-semibold text-slate-900 mb-3 flex items-center gap-2">
+                    <h3 className="font-heading text-2xl font-semibold text-slate-900 mb-3">
                       {product.name}
-                      <ChevronRight className="h-5 w-5 text-slate-400 group-hover:text-sky-500 group-hover:translate-x-1 transition-all" />
                     </h3>
-                    <p className="text-slate-600 leading-relaxed">
-                      {product.description}
+                    <p className="text-slate-600 leading-relaxed mb-6">
+                      {product.tagline}
                     </p>
+                    <ul className="space-y-3 mb-6">
+                      {product.capabilities.map((capability, index) => (
+                        <li key={index} className="flex items-start gap-3 text-sm text-slate-600">
+                          <Check className="h-4 w-4 text-sky-500 flex-shrink-0 mt-0.5" />
+                          {capability}
+                        </li>
+                      ))}
+                    </ul>
+                    <span className="inline-flex items-center text-sm font-medium text-sky-500 group-hover:text-sky-600">
+                      {product.cta}
+                      <ChevronRight className="ml-1 h-4 w-4 group-hover:translate-x-1 transition-transform" />
+                    </span>
                   </CardContent>
                 </Card>
               </Link>
@@ -198,7 +213,7 @@ const Home = () => {
           <div className="text-center mt-12">
             <Button asChild variant="outline" size="lg" className="border-slate-300 hover:border-slate-400">
               <Link to="/products" data-testid="explore-products-btn">
-                Explore All Products
+                Compare Platforms
                 <ChevronRight className="ml-2 h-5 w-5" />
               </Link>
             </Button>

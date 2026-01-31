@@ -22,10 +22,8 @@ const Header = () => {
   ];
 
   const products = [
-    { name: "Device Shield", href: "/products/device-shield" },
-    { name: "Risk Intelligence", href: "/products/risk-intelligence" },
-    { name: "Compliance & Audit", href: "/products/compliance-audit" },
-    { name: "Threat Response", href: "/products/threat-response" },
+    { name: "Resilience", href: "/products/resilience", description: "Risk visibility & management" },
+    { name: "Aegis", href: "/products/aegis", description: "Protection & response" },
   ];
 
   const isActive = (href) => location.pathname === href || location.pathname.startsWith(href + "/");
@@ -56,16 +54,22 @@ const Header = () => {
                       <ChevronDown className="h-4 w-4" />
                     </button>
                   </DropdownMenuTrigger>
-                  <DropdownMenuContent align="start" className="w-48">
+                  <DropdownMenuContent align="start" className="w-56">
                     <DropdownMenuItem asChild>
                       <Link to="/products" className="w-full" data-testid="products-overview-link">
-                        All Products
+                        <div>
+                          <div className="font-medium">All Products</div>
+                          <div className="text-xs text-slate-500">Compare platforms</div>
+                        </div>
                       </Link>
                     </DropdownMenuItem>
                     {products.map((product) => (
                       <DropdownMenuItem key={product.name} asChild>
                         <Link to={product.href} className="w-full" data-testid={`product-link-${product.href.split('/').pop()}`}>
-                          {product.name}
+                          <div>
+                            <div className="font-medium">{product.name}</div>
+                            <div className="text-xs text-slate-500">{product.description}</div>
+                          </div>
                         </Link>
                       </DropdownMenuItem>
                     ))}

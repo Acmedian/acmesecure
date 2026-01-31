@@ -4,10 +4,9 @@ import { Shield, Linkedin, Twitter } from "lucide-react";
 const Footer = () => {
   const footerLinks = {
     products: [
-      { name: "Device Shield", href: "/products/device-shield" },
-      { name: "Risk Intelligence", href: "/products/risk-intelligence" },
-      { name: "Compliance & Audit", href: "/products/compliance-audit" },
-      { name: "Threat Response", href: "/products/threat-response" },
+      { name: "Resilience", href: "/products/resilience" },
+      { name: "Aegis", href: "/products/aegis" },
+      { name: "Compare Platforms", href: "/products" },
     ],
     company: [
       { name: "About Us", href: "/about" },

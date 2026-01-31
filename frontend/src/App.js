@@ -10,10 +10,8 @@ import LiveChat from "@/components/layout/LiveChat";
 // Pages
 import Home from "@/pages/Home";
 import Products from "@/pages/Products";
-import DeviceShield from "@/pages/products/DeviceShield";
-import RiskIntelligence from "@/pages/products/RiskIntelligence";
-import ComplianceAudit from "@/pages/products/ComplianceAudit";
-import ThreatResponse from "@/pages/products/ThreatResponse";
+import Resilience from "@/pages/products/Resilience";
+import Aegis from "@/pages/products/Aegis";
 import Solutions from "@/pages/Solutions";
 import HowItWorks from "@/pages/HowItWorks";
 import About from "@/pages/About";
@@ -29,10 +27,8 @@ function App() {
           <Routes>
             <Route path="/" element={<Home />} />
             <Route path="/products" element={<Products />} />
-            <Route path="/products/device-shield" element={<DeviceShield />} />
-            <Route path="/products/risk-intelligence" element={<RiskIntelligence />} />
-            <Route path="/products/compliance-audit" element={<ComplianceAudit />} />
-            <Route path="/products/threat-response" element={<ThreatResponse />} />
+            <Route path="/products/resilience" element={<Resilience />} />
+            <Route path="/products/aegis" element={<Aegis />} />
             <Route path="/solutions" element={<Solutions />} />
             <Route path="/how-it-works" element={<HowItWorks />} />
             <Route path="/about" element={<About />} />
