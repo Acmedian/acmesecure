@@ -155,7 +155,7 @@ async def create_demo_request(input: DemoRequestCreate):
     """
     
     await send_notification_email(
-        f"New Demo Request from {demo_obj.name} at {demo_obj.company}",
+        f"New Demo Request – AcmeSecure",
         html_content
     )
     
