@@ -30,7 +30,7 @@ const Footer = () => {
               <img 
                 src="https://customer-assets.emergentagent.com/job_220fc9ab-b016-4ce4-812c-78cce458c17b/artifacts/e4y3j6qe_acmesecure.png" 
                 alt="AcmeSecure" 
-                className="h-10 w-auto brightness-0 invert"
+                className="h-10 w-auto"
               />
             </Link>
             <p className="text-sm leading-relaxed mb-6 max-w-sm">

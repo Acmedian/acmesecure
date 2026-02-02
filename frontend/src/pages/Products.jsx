@@ -72,7 +72,7 @@ const Products = () => {
                     <img 
                       src={product.logo} 
                       alt={product.name} 
-                      className="h-12 w-auto mb-4 brightness-0 invert"
+                      className="h-12 w-auto mb-4"
                     />
                     <p className="text-sky-400 font-medium text-sm uppercase tracking-wider">
                       {product.tagline}
