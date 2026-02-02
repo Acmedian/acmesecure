@@ -31,30 +31,28 @@ const Contact = () => {
   const [isSubmitted, setIsSubmitted] = useState(false);
 
   const roles = [
-    "CISO",
-    "CIO",
-    "VP of Security",
-    "Security Director",
+    "CISO / IT Security Head",
+    "HR Director / CHRO",
+    "IT Director / CIO",
     "Security Manager",
-    "Security Analyst",
-    "IT Director",
+    "HR Manager",
+    "Program Manager",
     "Other",
   ];
 
   const industries = [
-    "Government & Defense",
-    "Banking & Financial Services",
+    "IT / ITES / Software",
+    "Large Enterprises / Corporates",
+    "Government / PSU",
+    "BFSI",
+    "Education",
     "Healthcare",
-    "Manufacturing",
-    "Technology",
-    "Retail",
-    "Energy & Utilities",
     "Other",
   ];
 
   const trustSignals = [
-    { text: "Enterprise-grade security", icon: Shield },
-    { text: "Trusted by Fortune 500", icon: Building2 },
+    { text: "Enterprise-grade platforms", icon: Shield },
+    { text: "Trusted by organizations", icon: Building2 },
     { text: "Response within 24 hours", icon: Clock },
   ];
 
@@ -97,7 +95,7 @@ const Contact = () => {
                 Thank You
               </h1>
               <p className="text-lg text-slate-300 mb-8">
-                Your demo request has been received. Our team will reach out shortly to schedule a personalized demonstration of AcmeSecure.
+                Your demo request has been received. Our team will reach out shortly to schedule a personalized demonstration.
               </p>
               <Button 
                 onClick={() => {
@@ -136,7 +134,7 @@ const Contact = () => {
                 Request a Demo
               </h1>
               <p className="text-lg text-slate-300 leading-relaxed mb-8">
-                See how AcmeSecure can help your organization identify, measure, and reduce cyber risk. Fill out the form and our team will reach out to schedule a personalized demo.
+                See how AcmeSecure can help your organization with well-being assessment and mobile security enforcement. Fill out the form and our team will reach out to schedule a personalized demo.
               </p>
 
               {/* Trust Signals */}
@@ -154,28 +152,28 @@ const Contact = () => {
               {/* Contact Info */}
               <div className="bg-slate-900/50 rounded-xl p-6 border border-slate-800">
                 <h3 className="font-heading font-semibold text-white mb-4">
-                  Other Ways to Reach Us
+                  Contact Information
                 </h3>
                 <div className="space-y-4">
                   <a 
-                    href="mailto:contact@acmesecure.com" 
+                    href="mailto:info@acmedian.com" 
                     className="flex items-center gap-3 text-slate-300 hover:text-sky-400 transition-colors"
                     data-testid="contact-email"
                   >
                     <Mail className="h-5 w-5" />
-                    <span>contact@acmesecure.com</span>
+                    <span>info@acmedian.com</span>
                   </a>
                   <a 
-                    href="tel:+1-800-SECURE1" 
+                    href="tel:+916283534979" 
                     className="flex items-center gap-3 text-slate-300 hover:text-sky-400 transition-colors"
                     data-testid="contact-phone"
                   >
                     <Phone className="h-5 w-5" />
-                    <span>+1-800-SECURE1</span>
+                    <span>+91-6283534979</span>
                   </a>
-                  <div className="flex items-center gap-3 text-slate-300">
-                    <MapPin className="h-5 w-5" />
-                    <span>San Francisco, CA</span>
+                  <div className="flex items-start gap-3 text-slate-300">
+                    <MapPin className="h-5 w-5 mt-0.5" />
+                    <span>Chandigarh and Noida, India</span>
                   </div>
                 </div>
               </div>
@@ -198,7 +196,7 @@ const Contact = () => {
                       />
                     </div>
                     <div className="space-y-2">
-                      <Label htmlFor="company">Company *</Label>
+                      <Label htmlFor="company">Organization *</Label>
                       <Input
                         id="company"
                         placeholder="Acme Corporation"
@@ -266,7 +264,7 @@ const Contact = () => {
                     <Label htmlFor="message">Message (Optional)</Label>
                     <Textarea
                       id="message"
-                      placeholder="Tell us about your security challenges or specific interests..."
+                      placeholder="Tell us about your requirements or specific interests..."
                       value={formData.message}
                       onChange={(e) => handleChange("message", e.target.value)}
                       rows={4}

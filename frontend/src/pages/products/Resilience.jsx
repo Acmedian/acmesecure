@@ -4,12 +4,12 @@ import { Card, CardContent } from "@/components/ui/card";
 import { 
   BarChart3, 
   Check, 
-  Eye, 
+  Heart, 
+  Brain, 
   Activity, 
-  TrendingUp, 
-  LayoutDashboard,
-  FileCheck,
+  Wallet,
   Users,
+  FileText,
   ArrowRight, 
   ChevronRight 
 } from "lucide-react";
@@ -17,62 +17,62 @@ import {
 const Resilience = () => {
   const capabilities = [
     {
-      title: "Asset & Risk Identification",
-      description: "Automatically discover and inventory all devices, users, applications, and access points across your environment. Understand what you have before you can protect it.",
-      icon: Eye,
+      title: "Mental Well-being Assessment",
+      description: "Structured surveys to understand mental health indicators across your workforce, with responses categorized by severity level for appropriate follow-up.",
+      icon: Brain,
     },
     {
-      title: "Continuous Exposure Measurement",
-      description: "Real-time assessment of vulnerabilities, misconfigurations, and security gaps. Track your exposure as it changes, not just at point-in-time assessments.",
+      title: "Physical Well-being Assessment",
+      description: "Evaluate physical health awareness and lifestyle factors through targeted questionnaires designed for enterprise well-being programs.",
+      icon: Heart,
+    },
+    {
+      title: "Stress Level Evaluation",
+      description: "Measure workplace and personal stress indicators to identify areas requiring organizational attention and support.",
       icon: Activity,
     },
     {
-      title: "Centralized Risk Scoring",
-      description: "Aggregate and normalize risk data across your security tools into unified risk scores. Prioritize based on business impact, exploitability, and asset criticality.",
-      icon: TrendingUp,
+      title: "Financial Well-being Assessment",
+      description: "Understand financial wellness factors that impact employee productivity and overall well-being, enabling targeted support programs.",
+      icon: Wallet,
     },
     {
-      title: "Executive-Ready Visibility",
-      description: "Present security posture and risk trends to leadership with clear, customizable dashboards designed for board-level and CISO communication.",
-      icon: LayoutDashboard,
+      title: "Aggregated Reporting",
+      description: "Clear dashboards providing organizational visibility into workforce well-being trends, with appropriate privacy safeguards.",
+      icon: FileText,
     },
     {
-      title: "Compliance Posture Tracking",
-      description: "Monitor compliance status across multiple frameworks simultaneously. Identify gaps and track progress toward regulatory requirements.",
-      icon: FileCheck,
-    },
-    {
-      title: "Risk Intelligence Sharing",
-      description: "Export prioritized risk intelligence to operational teams and integrate with Aegis for automated remediation and policy enforcement.",
+      title: "Enterprise Administration",
+      description: "Centralized management of assessment programs, user groups, and reporting for HR and program administrators.",
       icon: Users,
     },
   ];
 
   const problems = [
-    "Lack of visibility into true organizational risk posture",
-    "Siloed security data across multiple tools and teams",
-    "Difficulty communicating security status to leadership",
-    "Point-in-time assessments that miss evolving threats",
-    "No clear prioritization for remediation efforts",
-    "Compliance reporting that consumes significant resources",
+    "Limited visibility into workforce well-being at scale",
+    "No structured approach to assess employee mental and physical health",
+    "Difficulty categorizing and prioritizing support needs",
+    "Lack of aggregated insights for program planning",
+    "Manual processes for well-being program management",
+    "Disconnected data across multiple assessment tools",
   ];
 
   const audiences = [
     {
-      role: "CISOs & Security Leadership",
-      benefit: "Board-ready risk reporting and strategic security visibility",
+      role: "Enterprise HR Teams",
+      benefit: "Structured workforce well-being assessment and reporting",
     },
     {
-      role: "Risk Management Teams",
-      benefit: "Centralized risk scoring and exposure tracking",
+      role: "Government Program Managers",
+      benefit: "Scalable well-being initiatives for public sector programs",
     },
     {
-      role: "Compliance Officers",
-      benefit: "Continuous compliance monitoring and audit preparation",
+      role: "Corporate Wellness Teams",
+      benefit: "Data-driven insights for wellness program design",
     },
     {
-      role: "Security Architects",
-      benefit: "Environment-wide security posture assessment",
+      role: "People Operations",
+      benefit: "Employee support prioritization and resource allocation",
     },
   ];
 
@@ -88,17 +88,16 @@ const Resilience = () => {
           </div>
           <div className="grid lg:grid-cols-2 gap-12 items-center">
             <div>
-              <div className="w-16 h-16 rounded-xl bg-sky-500 flex items-center justify-center mb-6">
-                <BarChart3 className="h-8 w-8 text-white" />
-              </div>
-              <h1 className="font-heading text-4xl sm:text-5xl font-bold text-white tracking-tight mb-4">
-                AcmeSecure Resilience
-              </h1>
+              <img 
+                src="https://customer-assets.emergentagent.com/job_220fc9ab-b016-4ce4-812c-78cce458c17b/artifacts/37ruae2w_resilience.png" 
+                alt="AcmeSecure Resilience" 
+                className="h-14 w-auto mb-6 brightness-0 invert"
+              />
               <p className="text-sky-400 font-medium text-sm uppercase tracking-wider mb-6">
-                Understand and Manage Risk
+                Well-being Assessment Platform
               </p>
               <p className="text-lg md:text-xl text-slate-300 leading-relaxed mb-8">
-                A continuous cyber risk and exposure management platform designed for enterprise and regulated environments. Resilience provides the visibility and intelligence security leaders need to understand their organization's risk posture and make informed decisions.
+                A survey-based well-being and risk assessment platform designed for enterprises and government programs. Resilience enables organizations to understand workforce well-being through structured surveys covering mental, physical, stress, and financial dimensions—with responses categorized into Severe, Moderate, and Mild levels.
               </p>
               <Button asChild size="lg" className="bg-sky-500 hover:bg-sky-600 text-white accent-glow">
                 <Link to="/contact" data-testid="resilience-demo-btn">
@@ -109,8 +108,8 @@ const Resilience = () => {
             </div>
             <div className="hidden lg:block">
               <img
-                src="https://images.unsplash.com/photo-1739054730201-4b6463484e3c?crop=entropy&cs=srgb&fm=jpg&q=85"
-                alt="Risk Intelligence Dashboard"
+                src="https://images.unsplash.com/photo-1573497019940-1c28c88b4f3e?crop=entropy&cs=srgb&fm=jpg&q=85"
+                alt="Workforce Well-being"
                 className="rounded-xl shadow-2xl"
               />
             </div>
@@ -127,7 +126,7 @@ const Resilience = () => {
                 What Problems Resilience Solves
               </h2>
               <p className="text-lg text-slate-600 mb-8">
-                Security teams face increasing pressure to demonstrate risk reduction while managing sprawling environments and evolving threats. Resilience addresses these challenges directly.
+                Organizations need structured approaches to understand and support workforce well-being. Resilience provides the framework for assessment, categorization, and reporting at enterprise scale.
               </p>
               <ul className="space-y-4">
                 {problems.map((problem, index) => (
@@ -142,24 +141,24 @@ const Resilience = () => {
             </div>
             <div className="bg-slate-900 rounded-xl p-8">
               <h3 className="font-heading text-xl font-semibold text-white mb-6">
-                The Resilience Difference
+                The Resilience Approach
               </h3>
               <ul className="space-y-4 text-slate-300">
                 <li className="flex items-start gap-3">
                   <Check className="h-5 w-5 text-sky-400 flex-shrink-0 mt-0.5" />
-                  <span>Continuous visibility, not periodic snapshots</span>
+                  <span>Structured surveys, not ad-hoc questionnaires</span>
                 </li>
                 <li className="flex items-start gap-3">
                   <Check className="h-5 w-5 text-sky-400 flex-shrink-0 mt-0.5" />
-                  <span>Business-context prioritization, not just CVSS scores</span>
+                  <span>Clear categorization: Severe, Moderate, Mild</span>
                 </li>
                 <li className="flex items-start gap-3">
                   <Check className="h-5 w-5 text-sky-400 flex-shrink-0 mt-0.5" />
-                  <span>Executive-ready reporting, not raw data exports</span>
+                  <span>Aggregated insights, not individual exposure</span>
                 </li>
                 <li className="flex items-start gap-3">
                   <Check className="h-5 w-5 text-sky-400 flex-shrink-0 mt-0.5" />
-                  <span>Actionable intelligence, not alert fatigue</span>
+                  <span>Professional assessment, non-medical approach</span>
                 </li>
               </ul>
             </div>
@@ -175,7 +174,7 @@ const Resilience = () => {
               Core Capabilities
             </h2>
             <p className="text-lg text-slate-600 max-w-2xl mx-auto">
-              Resilience provides the foundation for understanding and managing cyber risk across your organization.
+              Resilience provides comprehensive well-being assessment capabilities for enterprise and government programs.
             </p>
           </div>
 
@@ -211,7 +210,7 @@ const Resilience = () => {
               Who Resilience Is For
             </h2>
             <p className="text-lg text-slate-600 max-w-2xl mx-auto">
-              Resilience serves security leaders and teams who need to understand, communicate, and strategically manage organizational cyber risk.
+              Resilience serves organizations that need structured, scalable approaches to workforce well-being assessment.
             </p>
           </div>
 
@@ -240,10 +239,10 @@ const Resilience = () => {
       <section className="bg-slate-900 py-24" data-testid="resilience-cta">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h2 className="font-heading text-3xl md:text-4xl font-semibold text-white mb-6">
-            Ready for Complete Risk Visibility?
+            Ready to Assess Workforce Well-being?
           </h2>
           <p className="text-lg text-slate-300 mb-8 max-w-2xl mx-auto">
-            See how Resilience can transform your security program with continuous risk intelligence and executive-ready visibility.
+            See how Resilience can help your organization understand and support workforce well-being with structured assessment and clear reporting.
           </p>
           <Button asChild size="lg" className="bg-sky-500 hover:bg-sky-600 text-white accent-glow px-8">
             <Link to="/contact" data-testid="resilience-final-demo-btn">

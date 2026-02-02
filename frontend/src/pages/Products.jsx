@@ -1,41 +1,43 @@
 import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
-import { Shield, BarChart3, Check, ChevronRight, ArrowRight } from "lucide-react";
+import { Shield, BarChart3, Check, ChevronRight, ArrowRight, Users, Smartphone } from "lucide-react";
 
 const Products = () => {
   const products = [
     {
       name: "AcmeSecure Resilience",
-      tagline: "Understand and Manage Risk",
-      description: "A continuous cyber risk and exposure management platform designed for enterprise and regulated environments. Resilience provides the visibility and intelligence security leaders need to understand their organization's risk posture and make informed decisions.",
+      tagline: "Well-being Assessment Platform",
+      description: "A survey-based well-being and risk assessment platform designed for enterprises and government programs. Resilience enables organizations to understand the mental, physical, stress, and financial well-being of their workforce through structured assessments.",
       href: "/products/resilience",
+      logo: "https://customer-assets.emergentagent.com/job_220fc9ab-b016-4ce4-812c-78cce458c17b/artifacts/37ruae2w_resilience.png",
       icon: BarChart3,
       capabilities: [
-        "Asset, device, and user risk identification across all environments",
-        "Continuous exposure measurement and security posture tracking",
-        "Centralized risk scoring with business context prioritization",
-        "Executive-level dashboards and CISO-ready reporting",
-        "Compliance posture monitoring across multiple frameworks",
-        "Risk trend analysis and improvement tracking",
+        "Structured surveys covering mental, physical, stress, and financial well-being",
+        "Response categorization into Severe, Moderate, and Mild levels",
+        "Aggregated dashboards for organizational visibility",
+        "Clear reporting for workforce program management",
+        "Designed for enterprise HR and government well-being initiatives",
+        "Professional, non-medical assessment approach",
       ],
-      audience: "CISOs, Security Leadership, Risk Management Teams, Compliance Officers",
+      audience: "Enterprise HR, Government Program Managers, Workforce Well-being Teams",
     },
     {
       name: "AcmeSecure Aegis",
-      tagline: "Protect and Respond",
-      description: "A protection, enforcement, and response platform that operationalizes risk reduction. Aegis translates risk intelligence into action, providing the tools security teams need to protect assets, enforce policies, and respond to threats.",
+      tagline: "Mobile Security Enforcement Platform",
+      description: "An automated mobile security policy enforcement platform that protects smartphones from malware, phishing, fraud, and unauthorized applications. Aegis enables centralized management of security policies based on industry and government advisories.",
       href: "/products/aegis",
+      logo: "https://customer-assets.emergentagent.com/job_220fc9ab-b016-4ce4-812c-78cce458c17b/artifacts/txjx7h1z_aegis.png",
       icon: Shield,
       capabilities: [
-        "Device and endpoint protection with continuous posture monitoring",
-        "Policy enforcement and configuration drift control",
-        "Risk-driven remediation guidance and workflow automation",
-        "Incident detection support with risk-based prioritization",
-        "Response enablement with integration-ready architecture",
-        "Operational security execution across distributed environments",
+        "Centralized management of restricted apps and websites",
+        "Security policy enforcement based on industry advisories",
+        "Detection of spam and scam call indicators",
+        "Operating system policy management",
+        "Administrative reporting and historical analysis",
+        "Privacy-focused enforcement through managed connections",
       ],
-      audience: "Security Operations, IT Security Teams, SOC Analysts, Operations Teams",
+      audience: "IT Security Teams, Enterprise Mobility Managers, Government IT Administrators",
     },
   ];
 
@@ -49,7 +51,7 @@ const Products = () => {
               Two Platforms. Complete Coverage.
             </h1>
             <p className="text-lg md:text-xl text-slate-300 leading-relaxed">
-              AcmeSecure delivers enterprise security through two integrated platforms: Resilience for risk visibility and decision-making, Aegis for protection and operational response. Together, they provide end-to-end cyber risk reduction.
+              AcmeSecure delivers enterprise value through two independent platforms: Resilience for workforce well-being assessment, and Aegis for mobile security policy enforcement. Each platform stands alone while offering complementary organizational benefits.
             </p>
           </div>
         </div>
@@ -67,12 +69,11 @@ const Products = () => {
               >
                 <CardContent className="p-0">
                   <div className="bg-slate-900 p-8">
-                    <div className="w-14 h-14 rounded-xl bg-sky-500 flex items-center justify-center mb-6">
-                      <product.icon className="h-7 w-7 text-white" />
-                    </div>
-                    <h2 className="font-heading text-2xl font-semibold text-white mb-2">
-                      {product.name}
-                    </h2>
+                    <img 
+                      src={product.logo} 
+                      alt={product.name} 
+                      className="h-12 w-auto mb-4 brightness-0 invert"
+                    />
                     <p className="text-sky-400 font-medium text-sm uppercase tracking-wider">
                       {product.tagline}
                     </p>
@@ -103,7 +104,7 @@ const Products = () => {
                         className="inline-flex items-center text-sm font-medium text-sky-500 hover:text-sky-600 transition-colors"
                         data-testid={`learn-more-${product.href.split('/').pop()}`}
                       >
-                        Learn More About {product.name.split(' ')[1]}
+                        Learn More
                         <ChevronRight className="ml-1 h-4 w-4" />
                       </Link>
                     </div>
@@ -115,7 +116,7 @@ const Products = () => {
         </div>
       </section>
 
-      {/* Platform Integration */}
+      {/* Better Together Section */}
       <section className="bg-slate-50 py-24" data-testid="platform-integration">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="max-w-3xl mx-auto text-center">
@@ -123,20 +124,23 @@ const Products = () => {
               Better Together
             </h2>
             <p className="text-lg text-slate-600 mb-8">
-              While each platform delivers standalone value, Resilience and Aegis are designed to work together. Risk intelligence from Resilience directly informs protection priorities in Aegis, creating a continuous feedback loop that improves security outcomes over time.
+              Resilience and Aegis are independent platforms that deliver standalone value. Together, they provide organizations with combined visibility into workforce well-being and mobile device security—two critical dimensions of organizational governance.
             </p>
             <div className="grid sm:grid-cols-2 gap-6 text-left">
               <div className="bg-white p-6 rounded-xl border border-slate-100">
-                <BarChart3 className="h-8 w-8 text-sky-500 mb-4" />
-                <h3 className="font-heading font-semibold text-slate-900 mb-2">Resilience Identifies</h3>
-                <p className="text-sm text-slate-600">Surfaces the risks and exposures that matter most to your organization</p>
+                <Users className="h-8 w-8 text-sky-500 mb-4" />
+                <h3 className="font-heading font-semibold text-slate-900 mb-2">Human Well-being</h3>
+                <p className="text-sm text-slate-600">Resilience addresses the human dimension—understanding workforce well-being through structured assessment and clear categorization.</p>
               </div>
               <div className="bg-white p-6 rounded-xl border border-slate-100">
-                <Shield className="h-8 w-8 text-sky-500 mb-4" />
-                <h3 className="font-heading font-semibold text-slate-900 mb-2">Aegis Remediates</h3>
-                <p className="text-sm text-slate-600">Operationalizes risk reduction through protection and response</p>
+                <Smartphone className="h-8 w-8 text-sky-500 mb-4" />
+                <h3 className="font-heading font-semibold text-slate-900 mb-2">Device Security</h3>
+                <p className="text-sm text-slate-600">Aegis addresses the technology dimension—protecting mobile devices through policy enforcement and security controls.</p>
               </div>
             </div>
+            <p className="text-sm text-slate-500 mt-8">
+              Organizations can deploy either platform independently or together based on their specific requirements.
+            </p>
           </div>
         </div>
       </section>
@@ -148,7 +152,7 @@ const Products = () => {
             Find the Right Platform for Your Organization
           </h2>
           <p className="text-lg text-slate-300 mb-8 max-w-2xl mx-auto">
-            Our team can help you determine which platform—or combination—best addresses your security challenges and compliance requirements.
+            Our team can help you determine which platform—or combination—best addresses your organizational requirements.
           </p>
           <Button asChild size="lg" className="bg-sky-500 hover:bg-sky-600 text-white accent-glow px-8">
             <Link to="/contact" data-testid="products-demo-btn">

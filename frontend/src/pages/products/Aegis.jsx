@@ -4,11 +4,11 @@ import { Card, CardContent } from "@/components/ui/card";
 import { 
   Shield, 
   Check, 
-  Monitor, 
+  Smartphone, 
   Settings, 
   AlertTriangle, 
-  Workflow,
-  Plug,
+  Ban,
+  FileText,
   Lock,
   ArrowRight, 
   ChevronRight 
@@ -17,62 +17,62 @@ import {
 const Aegis = () => {
   const capabilities = [
     {
-      title: "Device & Endpoint Protection",
-      description: "Continuous posture monitoring across your device fleet. Detect unauthorized devices, track configuration compliance, and maintain endpoint visibility at scale.",
-      icon: Monitor,
+      title: "Restricted App Management",
+      description: "Centralized definition and management of restricted applications based on industry and government advisories, with automated detection and notifications.",
+      icon: Ban,
     },
     {
-      title: "Policy Enforcement",
-      description: "Enforce security policies and detect configuration drift in real-time. Ensure devices and systems remain compliant with your security baselines.",
+      title: "Website Policy Enforcement",
+      description: "Manage access to restricted websites and domains, protecting users from phishing, fraud, and other web-based threats.",
       icon: Settings,
     },
     {
-      title: "Risk-Driven Remediation",
-      description: "Prioritized remediation guidance based on risk intelligence. Focus operational efforts on the exposures that matter most to your organization.",
+      title: "Spam & Scam Call Detection",
+      description: "Identify and flag spam and scam call indicators to protect users from phone-based fraud and social engineering attempts.",
       icon: AlertTriangle,
     },
     {
-      title: "Incident Response Enablement",
-      description: "Detect potential incidents early with correlated security events. Risk-based prioritization helps your SOC focus on genuine threats.",
-      icon: Workflow,
+      title: "Operating System Policies",
+      description: "Define and enforce policies related to operating system configurations, ensuring devices meet organizational security requirements.",
+      icon: Smartphone,
     },
     {
-      title: "Integration Architecture",
-      description: "Connect with your existing security stack including SIEM, SOAR, EDR, and ticketing systems. Aegis fits into your operational workflows.",
-      icon: Plug,
+      title: "Administrative Reporting",
+      description: "Comprehensive dashboards and reports for security administrators, including historical analysis and trend tracking.",
+      icon: FileText,
     },
     {
-      title: "Operational Execution",
-      description: "Translate risk intelligence into protective action across distributed environments. From policy enforcement to incident response, Aegis operationalizes security.",
+      title: "Privacy-Focused Enforcement",
+      description: "Where permitted through managed device connections, enforce security policies while maintaining user privacy and data integrity.",
       icon: Lock,
     },
   ];
 
   const problems = [
-    "Endpoints and devices with unknown security posture",
-    "Configuration drift going undetected until audits",
-    "No clear prioritization for security operations",
-    "Disconnected tools requiring manual correlation",
-    "Slow response times due to alert overload",
-    "Difficulty enforcing policies at enterprise scale",
+    "Smartphones storing sensitive personal and organizational data",
+    "Exposure to malware, phishing, and fraud through mobile devices",
+    "Unauthorized apps and services compromising security",
+    "Scam calls and social engineering targeting mobile users",
+    "No centralized visibility into mobile security posture",
+    "Difficulty enforcing security policies across device fleets",
   ];
 
   const audiences = [
     {
-      role: "Security Operations Teams",
-      benefit: "Risk-prioritized alerts and response workflows",
+      role: "IT Security Teams",
+      benefit: "Centralized mobile security policy management and enforcement",
     },
     {
-      role: "IT Security Administrators",
-      benefit: "Device protection and policy enforcement at scale",
+      role: "Enterprise Mobility Managers",
+      benefit: "Device fleet security oversight and compliance",
     },
     {
-      role: "SOC Analysts",
-      benefit: "Correlated events with business context",
+      role: "Government IT Administrators",
+      benefit: "Policy enforcement based on government advisories",
     },
     {
-      role: "Operations Teams",
-      benefit: "Integrated remediation and ticketing workflows",
+      role: "Security Operations",
+      benefit: "Mobile threat detection and response capabilities",
     },
   ];
 
@@ -88,17 +88,16 @@ const Aegis = () => {
           </div>
           <div className="grid lg:grid-cols-2 gap-12 items-center">
             <div>
-              <div className="w-16 h-16 rounded-xl bg-sky-500 flex items-center justify-center mb-6">
-                <Shield className="h-8 w-8 text-white" />
-              </div>
-              <h1 className="font-heading text-4xl sm:text-5xl font-bold text-white tracking-tight mb-4">
-                AcmeSecure Aegis
-              </h1>
+              <img 
+                src="https://customer-assets.emergentagent.com/job_220fc9ab-b016-4ce4-812c-78cce458c17b/artifacts/txjx7h1z_aegis.png" 
+                alt="AcmeSecure Aegis" 
+                className="h-14 w-auto mb-6 brightness-0 invert"
+              />
               <p className="text-sky-400 font-medium text-sm uppercase tracking-wider mb-6">
-                Protect and Respond
+                Mobile Security Enforcement Platform
               </p>
               <p className="text-lg md:text-xl text-slate-300 leading-relaxed mb-8">
-                A protection, enforcement, and response platform that operationalizes risk reduction. Aegis translates risk intelligence into action, providing the tools security teams need to protect assets, enforce policies, and respond to threats.
+                Smartphones store sensitive personal, financial, and operational data—and are constantly exposed to malware, phishing, fraud, scam calls, and unauthorized applications. Aegis enables automated enforcement of security policies on user smartphones based on industry and government advisories, with centralized management and reporting.
               </p>
               <Button asChild size="lg" className="bg-sky-500 hover:bg-sky-600 text-white accent-glow">
                 <Link to="/contact" data-testid="aegis-demo-btn">
@@ -109,8 +108,8 @@ const Aegis = () => {
             </div>
             <div className="hidden lg:block">
               <img
-                src="https://images.unsplash.com/photo-1506399558188-acca6f8cbf41?crop=entropy&cs=srgb&fm=jpg&q=85"
-                alt="Security Operations"
+                src="https://images.unsplash.com/photo-1563986768609-322da13575f3?crop=entropy&cs=srgb&fm=jpg&q=85"
+                alt="Mobile Security"
                 className="rounded-xl shadow-2xl"
               />
             </div>
@@ -127,7 +126,7 @@ const Aegis = () => {
                 What Problems Aegis Solves
               </h2>
               <p className="text-lg text-slate-600 mb-8">
-                Security operations teams struggle to protect expanding attack surfaces while managing alert fatigue and tool sprawl. Aegis addresses these operational challenges.
+                Mobile devices represent a significant attack surface for organizations. Aegis addresses these security challenges through policy enforcement and centralized management.
               </p>
               <ul className="space-y-4">
                 {problems.map((problem, index) => (
@@ -142,24 +141,24 @@ const Aegis = () => {
             </div>
             <div className="bg-slate-900 rounded-xl p-8">
               <h3 className="font-heading text-xl font-semibold text-white mb-6">
-                The Aegis Difference
+                The Aegis Approach
               </h3>
               <ul className="space-y-4 text-slate-300">
                 <li className="flex items-start gap-3">
                   <Check className="h-5 w-5 text-sky-400 flex-shrink-0 mt-0.5" />
-                  <span>Risk-driven prioritization, not equal-weight alerts</span>
+                  <span>Prevention and enforcement, not just detection</span>
                 </li>
                 <li className="flex items-start gap-3">
                   <Check className="h-5 w-5 text-sky-400 flex-shrink-0 mt-0.5" />
-                  <span>Continuous enforcement, not periodic remediation</span>
+                  <span>Policies based on industry and government advisories</span>
                 </li>
                 <li className="flex items-start gap-3">
                   <Check className="h-5 w-5 text-sky-400 flex-shrink-0 mt-0.5" />
-                  <span>Integration-ready, not another silo</span>
+                  <span>Centralized management with clear reporting</span>
                 </li>
                 <li className="flex items-start gap-3">
                   <Check className="h-5 w-5 text-sky-400 flex-shrink-0 mt-0.5" />
-                  <span>Operational focus, not just detection</span>
+                  <span>Privacy-focused with data integrity safeguards</span>
                 </li>
               </ul>
             </div>
@@ -175,7 +174,7 @@ const Aegis = () => {
               Core Capabilities
             </h2>
             <p className="text-lg text-slate-600 max-w-2xl mx-auto">
-              Aegis provides the operational capabilities to protect your organization and respond to threats effectively.
+              Aegis provides comprehensive mobile security policy enforcement capabilities for enterprises and government organizations.
             </p>
           </div>
 
@@ -211,7 +210,7 @@ const Aegis = () => {
               Who Aegis Is For
             </h2>
             <p className="text-lg text-slate-600 max-w-2xl mx-auto">
-              Aegis serves security operations and IT teams who need to protect assets, enforce policies, and respond to threats at enterprise scale.
+              Aegis serves organizations that need to protect mobile devices and enforce security policies at scale.
             </p>
           </div>
 
@@ -236,26 +235,32 @@ const Aegis = () => {
         </div>
       </section>
 
-      {/* Integration Partners */}
-      <section className="bg-slate-50 py-24" data-testid="aegis-integrations">
+      {/* Key Emphasis */}
+      <section className="bg-slate-50 py-24" data-testid="aegis-emphasis">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="max-w-3xl mx-auto text-center">
             <h2 className="font-heading text-3xl md:text-4xl font-semibold text-slate-900 mb-6">
-              Built to Integrate
+              Privacy, Integrity, Confidentiality
             </h2>
             <p className="text-lg text-slate-600 mb-8">
-              Aegis connects with your existing security infrastructure to enhance—not replace—your operational capabilities.
+              Aegis is designed with strong emphasis on user privacy, data integrity, and confidentiality. Security enforcement is implemented through managed connections where permitted, ensuring organizational security without compromising individual privacy.
             </p>
-            <div className="grid grid-cols-2 md:grid-cols-3 gap-4">
-              {["SIEM Platforms", "SOAR Solutions", "EDR/XDR Tools", "Ticketing Systems", "Threat Intel Feeds", "Cloud Security"].map((integration, index) => (
-                <div 
-                  key={integration}
-                  className="bg-white p-4 rounded-lg border border-slate-100 flex items-center gap-3"
-                >
-                  <Plug className="h-5 w-5 text-sky-500 flex-shrink-0" />
-                  <span className="text-sm font-medium text-slate-700">{integration}</span>
-                </div>
-              ))}
+            <div className="grid sm:grid-cols-3 gap-6">
+              <div className="bg-white p-6 rounded-xl border border-slate-100">
+                <Lock className="h-8 w-8 text-sky-500 mx-auto mb-4" />
+                <h3 className="font-heading font-semibold text-slate-900 mb-2">Privacy</h3>
+                <p className="text-sm text-slate-600">User privacy protected through policy design</p>
+              </div>
+              <div className="bg-white p-6 rounded-xl border border-slate-100">
+                <Shield className="h-8 w-8 text-sky-500 mx-auto mb-4" />
+                <h3 className="font-heading font-semibold text-slate-900 mb-2">Integrity</h3>
+                <p className="text-sm text-slate-600">Data integrity maintained throughout</p>
+              </div>
+              <div className="bg-white p-6 rounded-xl border border-slate-100">
+                <Check className="h-8 w-8 text-sky-500 mx-auto mb-4" />
+                <h3 className="font-heading font-semibold text-slate-900 mb-2">Confidentiality</h3>
+                <p className="text-sm text-slate-600">Information confidentiality assured</p>
+              </div>
             </div>
           </div>
         </div>
@@ -265,10 +270,10 @@ const Aegis = () => {
       <section className="bg-slate-900 py-24" data-testid="aegis-cta">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h2 className="font-heading text-3xl md:text-4xl font-semibold text-white mb-6">
-            Ready to Operationalize Risk Reduction?
+            Ready to Secure Mobile Devices?
           </h2>
           <p className="text-lg text-slate-300 mb-8 max-w-2xl mx-auto">
-            See how Aegis can transform your security operations with risk-driven protection and response capabilities.
+            See how Aegis can help your organization enforce mobile security policies with centralized management and clear reporting.
           </p>
           <Button asChild size="lg" className="bg-sky-500 hover:bg-sky-600 text-white accent-glow px-8">
             <Link to="/contact" data-testid="aegis-final-demo-btn">

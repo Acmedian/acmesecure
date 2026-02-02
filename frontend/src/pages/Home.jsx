@@ -2,7 +2,6 @@ import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import { 
-  Shield, 
   Eye, 
   Activity, 
   Target, 
@@ -14,27 +13,28 @@ import {
   Check,
   ArrowRight,
   BarChart3,
-  Lock
+  Shield,
+  GraduationCap
 } from "lucide-react";
 
 const Home = () => {
   const processSteps = [
     {
       step: "01",
-      title: "Identify Risk",
-      description: "Discover all devices, users, configurations, and access points across your environment.",
+      title: "Assess",
+      description: "Structured surveys and policy checks to understand organizational well-being and security posture.",
       icon: Eye,
     },
     {
       step: "02",
-      title: "Measure Exposure",
-      description: "Real-time visibility into vulnerabilities, misconfigurations, and security posture.",
+      title: "Analyze",
+      description: "Categorize findings by severity and generate actionable insights for decision-makers.",
       icon: Activity,
     },
     {
       step: "03",
-      title: "Reduce Risk",
-      description: "Actionable remediation guidance and automated policy enforcement.",
+      title: "Act",
+      description: "Implement targeted interventions and enforce security policies across your organization.",
       icon: Target,
     },
   ];
@@ -42,27 +42,29 @@ const Home = () => {
   const products = [
     {
       name: "AcmeSecure Resilience",
-      tagline: "Continuous cyber risk and exposure management for enterprise environments.",
+      tagline: "Survey-based well-being and risk assessment for enterprises.",
       href: "/products/resilience",
+      logo: "https://customer-assets.emergentagent.com/job_220fc9ab-b016-4ce4-812c-78cce458c17b/artifacts/37ruae2w_resilience.png",
       icon: BarChart3,
       capabilities: [
-        "Asset, device, and user risk identification",
-        "Continuous exposure measurement",
-        "Centralized risk scoring and prioritization",
-        "Executive-ready security posture visibility",
+        "Structured surveys covering mental, physical, stress, and financial well-being",
+        "Response categorization: Severe, Moderate, Mild",
+        "Aggregated dashboards for workforce insights",
+        "Designed for enterprise and government programs",
       ],
       cta: "Explore Resilience",
     },
     {
       name: "AcmeSecure Aegis",
-      tagline: "Protection, enforcement, and response that operationalizes risk reduction.",
+      tagline: "Automated mobile security policy enforcement.",
       href: "/products/aegis",
+      logo: "https://customer-assets.emergentagent.com/job_220fc9ab-b016-4ce4-812c-78cce458c17b/artifacts/txjx7h1z_aegis.png",
       icon: Shield,
       capabilities: [
-        "Device and endpoint protection",
-        "Policy enforcement and configuration control",
-        "Risk-driven remediation guidance",
-        "Incident detection and response enablement",
+        "Centralized management of restricted apps and websites",
+        "Security policy enforcement based on industry advisories",
+        "Spam and scam call indicator detection",
+        "Administrative reporting and historical analysis",
       ],
       cta: "Explore Aegis",
     },
@@ -72,15 +74,15 @@ const Home = () => {
     "Built for large-scale enterprise environments",
     "Designed for regulated and high-security sectors",
     "Fast deployment with minimal operational overhead",
-    "Actionable insights, not just alerts",
+    "Actionable insights with clear reporting",
   ];
 
   const industries = [
-    { name: "Government & Defense", icon: Landmark },
-    { name: "Banking & Financial Services", icon: Building2 },
-    { name: "Healthcare", icon: Heart },
-    { name: "Manufacturing", icon: Factory },
+    { name: "IT / ITES / Software", icon: Building2 },
     { name: "Large Enterprises", icon: Building2 },
+    { name: "Government / PSU", icon: Landmark },
+    { name: "BFSI", icon: Heart },
+    { name: "Education", icon: GraduationCap },
   ];
 
   return (
@@ -88,9 +90,9 @@ const Home = () => {
       {/* Hero Section */}
       <section className="relative bg-slate-950 overflow-hidden" data-testid="hero-section">
         <div 
-          className="absolute inset-0 opacity-20"
+          className="absolute inset-0 opacity-30"
           style={{
-            backgroundImage: `url('https://images.unsplash.com/photo-1628939824352-baa1cdddeb6b?crop=entropy&cs=srgb&fm=jpg&q=85')`,
+            backgroundImage: `url('https://images.unsplash.com/photo-1558494949-ef010cbdcc31?crop=entropy&cs=srgb&fm=jpg&q=85')`,
             backgroundSize: 'cover',
             backgroundPosition: 'center',
           }}
@@ -100,10 +102,10 @@ const Home = () => {
         <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-24 md:py-32">
           <div className="max-w-3xl">
             <h1 className="font-heading text-4xl sm:text-5xl lg:text-6xl font-bold text-white tracking-tight leading-tight mb-6">
-              Continuously Reduce Cyber Risk Across Devices, Users, and Environments
+              Well-being Assessment & Mobile Security for Enterprises
             </h1>
             <p className="text-lg md:text-xl text-slate-300 leading-relaxed mb-8 max-w-2xl">
-              AcmeSecure helps enterprises identify, measure, and reduce cyber exposure with continuous risk intelligence and targeted controls.
+              AcmeSecure helps organizations assess workforce well-being and enforce mobile security policies with clarity, precision, and scale.
             </p>
             <div className="flex flex-col sm:flex-row gap-4">
               <Button asChild size="lg" className="bg-sky-500 hover:bg-sky-600 text-white accent-glow px-8">
@@ -127,10 +129,10 @@ const Home = () => {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
             <h2 className="font-heading text-3xl md:text-4xl font-semibold text-slate-900 mb-4">
-              How AcmeSecure Reduces Risk
+              How AcmeSecure Works
             </h2>
             <p className="text-lg text-slate-600 max-w-2xl mx-auto">
-              A continuous, three-step approach to identifying, measuring, and reducing your organization's cyber exposure.
+              A structured approach to assessing, analyzing, and acting on organizational well-being and security needs.
             </p>
           </div>
 
@@ -169,7 +171,7 @@ const Home = () => {
               Two Platforms. Complete Coverage.
             </h2>
             <p className="text-lg text-slate-600 max-w-2xl mx-auto">
-              A unified approach to enterprise security: understand your risk with Resilience, then protect and respond with Aegis.
+              Address human well-being with Resilience and mobile device security with Aegis—two independent platforms delivering complementary value.
             </p>
           </div>
 
@@ -183,12 +185,11 @@ const Home = () => {
               >
                 <Card className="h-full bg-white border-slate-100 shadow-lg hover:shadow-xl transition-all duration-300 hover:-translate-y-1 group-hover:border-sky-200">
                   <CardContent className="p-8">
-                    <div className="w-14 h-14 rounded-xl bg-slate-900 flex items-center justify-center mb-6 group-hover:bg-sky-500 transition-colors">
-                      <product.icon className="h-7 w-7 text-white" />
-                    </div>
-                    <h3 className="font-heading text-2xl font-semibold text-slate-900 mb-3">
-                      {product.name}
-                    </h3>
+                    <img 
+                      src={product.logo} 
+                      alt={product.name} 
+                      className="h-12 w-auto mb-6"
+                    />
                     <p className="text-slate-600 leading-relaxed mb-6">
                       {product.tagline}
                     </p>
@@ -230,7 +231,7 @@ const Home = () => {
                 Why Choose AcmeSecure
               </h2>
               <p className="text-lg text-slate-600 mb-8">
-                Built from the ground up to address the unique security challenges of large-scale enterprise and regulated environments.
+                Built from the ground up for the unique requirements of large-scale enterprise and government environments.
               </p>
               <ul className="space-y-4">
                 {whyPoints.map((point, index) => (
@@ -245,8 +246,8 @@ const Home = () => {
             </div>
             <div className="relative">
               <img
-                src="https://images.unsplash.com/photo-1506399558188-acca6f8cbf41?crop=entropy&cs=srgb&fm=jpg&q=85"
-                alt="Secure Data Center"
+                src="https://images.unsplash.com/photo-1551434678-e076c223a692?crop=entropy&cs=srgb&fm=jpg&q=85"
+                alt="Enterprise Team"
                 className="rounded-xl shadow-2xl"
               />
               <div className="absolute -bottom-6 -right-6 bg-slate-900 text-white p-6 rounded-xl shadow-xl max-w-xs">
@@ -254,7 +255,7 @@ const Home = () => {
                   Enterprise Ready
                 </p>
                 <p className="text-sm text-slate-300">
-                  Deployed across Fortune 500 companies and government agencies worldwide.
+                  Designed for large organizations and government programs with scale and reliability in mind.
                 </p>
               </div>
             </div>
@@ -270,7 +271,7 @@ const Home = () => {
               Industries We Serve
             </h2>
             <p className="text-lg text-slate-600 max-w-2xl mx-auto">
-              Trusted by organizations in the most demanding and regulated sectors.
+              Trusted by organizations across demanding sectors requiring reliable well-being and security solutions.
             </p>
           </div>
 
@@ -308,10 +309,10 @@ const Home = () => {
       <section className="bg-slate-900 py-24" data-testid="final-cta-section">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h2 className="font-heading text-3xl md:text-4xl font-semibold text-white mb-6">
-            Ready to Reduce Your Cyber Risk?
+            Ready to Get Started?
           </h2>
           <p className="text-lg text-slate-300 mb-8 max-w-2xl mx-auto">
-            See how AcmeSecure can help your organization achieve continuous risk reduction with a personalized demo.
+            See how AcmeSecure can help your organization assess well-being and enforce security policies with a personalized demo.
           </p>
           <Button asChild size="lg" className="bg-sky-500 hover:bg-sky-600 text-white accent-glow px-8">
             <Link to="/contact" data-testid="final-demo-btn">

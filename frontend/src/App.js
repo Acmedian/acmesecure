@@ -1,6 +1,7 @@
 import "@/App.css";
-import { BrowserRouter, Routes, Route } from "react-router-dom";
+import { BrowserRouter, Routes, Route, useLocation } from "react-router-dom";
 import { Toaster } from "@/components/ui/sonner";
+import { useEffect } from "react";
 
 // Layout
 import Header from "@/components/layout/Header";
@@ -18,10 +19,22 @@ import About from "@/pages/About";
 import Contact from "@/pages/Contact";
 import Blog from "@/pages/Blog";
 
+// Scroll to top on route change
+const ScrollToTop = () => {
+  const { pathname } = useLocation();
+  
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, [pathname]);
+  
+  return null;
+};
+
 function App() {
   return (
     <div className="App min-h-screen flex flex-col">
       <BrowserRouter>
+        <ScrollToTop />
         <Header />
         <main className="flex-1">
           <Routes>

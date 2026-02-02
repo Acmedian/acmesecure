@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { Link, useLocation } from "react-router-dom";
-import { Menu, X, Shield, ChevronDown } from "lucide-react";
+import { Menu, X, ChevronDown } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import {
   DropdownMenu,
@@ -22,8 +22,8 @@ const Header = () => {
   ];
 
   const products = [
-    { name: "Resilience", href: "/products/resilience", description: "Risk visibility & management" },
-    { name: "Aegis", href: "/products/aegis", description: "Protection & response" },
+    { name: "Resilience", href: "/products/resilience", description: "Well-being assessment" },
+    { name: "Aegis", href: "/products/aegis", description: "Mobile security enforcement" },
   ];
 
   const isActive = (href) => location.pathname === href || location.pathname.startsWith(href + "/");
@@ -34,8 +34,11 @@ const Header = () => {
         <div className="flex justify-between items-center h-16">
           {/* Logo */}
           <Link to="/" className="flex items-center gap-2" data-testid="logo-link">
-            <Shield className="h-8 w-8 text-sky-500" />
-            <span className="font-heading text-xl font-bold text-slate-900">AcmeSecure</span>
+            <img 
+              src="https://customer-assets.emergentagent.com/job_220fc9ab-b016-4ce4-812c-78cce458c17b/artifacts/e4y3j6qe_acmesecure.png" 
+              alt="AcmeSecure" 
+              className="h-10 w-auto"
+            />
           </Link>
 
           {/* Desktop Navigation */}

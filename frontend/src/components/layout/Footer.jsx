@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import { Shield, Linkedin, Twitter } from "lucide-react";
+import { Linkedin, Twitter } from "lucide-react";
 
 const Footer = () => {
   const footerLinks = {
@@ -27,11 +27,14 @@ const Footer = () => {
           {/* Brand */}
           <div className="lg:col-span-2">
             <Link to="/" className="flex items-center gap-2 mb-4" data-testid="footer-logo">
-              <Shield className="h-8 w-8 text-sky-500" />
-              <span className="font-heading text-xl font-bold text-white">AcmeSecure</span>
+              <img 
+                src="https://customer-assets.emergentagent.com/job_220fc9ab-b016-4ce4-812c-78cce458c17b/artifacts/e4y3j6qe_acmesecure.png" 
+                alt="AcmeSecure" 
+                className="h-10 w-auto brightness-0 invert"
+              />
             </Link>
             <p className="text-sm leading-relaxed mb-6 max-w-sm">
-              Continuously reduce cyber risk across devices, users, and environments with enterprise-grade security solutions.
+              Empowering enterprises with well-being assessment and mobile security enforcement solutions for a safer, healthier workforce.
             </p>
             <div className="flex gap-4">
               <a
