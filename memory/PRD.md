@@ -1,7 +1,7 @@
-# AcmeSecure - Enterprise Cyber Risk & Device Security Platform
+# AcmeSecure - Well-being Assessment & Mobile Security Platform
 
 ## Original Problem Statement
-Build a modern, enterprise-grade marketing website for AcmeSecure, a cybersecurity company focused on risk reduction, device security, and continuous exposure management for enterprises and regulated industries.
+Build a modern, enterprise-grade marketing website for AcmeSecure. V2 refinement: Restructured from 4 products to 2 platforms - Resilience (survey-based well-being assessment) and Aegis (mobile security policy enforcement).
 
 ## User Personas
 - **Primary:** CISOs, CIOs, IT Heads, Security Architects
@@ -16,7 +16,7 @@ Build a modern, enterprise-grade marketing website for AcmeSecure, a cybersecuri
 6. Clean typography (Outfit + Inter fonts)
 7. SEO-friendly semantic HTML
 
-## What's Been Implemented (January 2025)
+## What's Been Implemented (V2 - February 2025)
 
 ### Backend (FastAPI)
 - [x] Demo request endpoint (`POST /api/demo-request`) with MongoDB storage
@@ -24,24 +24,26 @@ Build a modern, enterprise-grade marketing website for AcmeSecure, a cybersecuri
 - [x] Resend email integration for form notifications
 - [x] All data retrieval endpoints
 
-### Frontend (React)
-- [x] **Home Page:** Hero section with CTAs, 3-step process, product cards, "Why AcmeSecure" section, industries grid, final CTA
-- [x] **Products Landing:** Overview of all 4 products with feature lists and links
-- [x] **Product Detail Pages:** Device Shield, Risk Intelligence, Compliance & Audit, Threat Response
-- [x] **Solutions/Industries:** Government & Defense, BFSI, Healthcare, Manufacturing, Enterprise IT
-- [x] **How It Works:** Detailed 3-step process (Identify, Measure, Reduce)
-- [x] **About:** Mission, values, commitments sections
-- [x] **Contact/Demo Request:** Full form with role/industry dropdowns, validation, success state
-- [x] **Blog/Resources:** Placeholder with resource types and article previews
-- [x] **Header:** Sticky nav with Products dropdown, mobile responsive menu
-- [x] **Footer:** Links, contact info, social icons
-- [x] **Live Chat:** Placeholder widget with open/close functionality
+### Frontend (React) - V2 Updates
+- [x] **Home Page:** Updated hero with well-being + mobile security messaging, 2-platform product cards
+- [x] **Products Landing:** 2 platforms only - Resilience and Aegis with "Better Together" section
+- [x] **Product Detail Pages:** 
+  - Resilience: Survey-based well-being assessment (mental, physical, stress, financial)
+  - Aegis: Mobile security policy enforcement platform
+- [x] **Solutions/Industries:** IT/ITES, Large Enterprises, Government/PSU, BFSI, Education
+- [x] **How It Works:** Assess, Analyze, Act process
+- [x] **About:** Updated mission for well-being + security
+- [x] **Contact:** Updated info - info@acmedian.com, +91-6283534979, Chandigarh & Noida, India
+- [x] **Scroll-to-top:** Global route change scroll behavior
+- [x] **Logos:** All logos updated from provided PNG files (AcmeSecure, Resilience, Aegis)
+- [x] Removed old 4-product structure
 
 ### Design System
 - Colors: Slate-950 (dark sections), White (light sections), Sky-500 (accent/CTAs)
 - Fonts: Outfit (headings), Inter (body)
 - shadcn/ui components with Tailwind CSS
 - Responsive design (desktop-first)
+- Provided PNG logos integrated
 
 ## Prioritized Backlog
 
