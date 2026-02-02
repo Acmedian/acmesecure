@@ -1,52 +1,52 @@
 import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
-import { Eye, Activity, Target, Check, ArrowRight, Search, BarChart3, Shield } from "lucide-react";
+import { Eye, Activity, Target, Check, ArrowRight, ClipboardList, BarChart3, Shield } from "lucide-react";
 
 const HowItWorks = () => {
   const steps = [
     {
       step: "01",
-      title: "Identify Risk",
-      subtitle: "Discovery & Inventory",
+      title: "Assess",
+      subtitle: "Structured Evaluation",
       icon: Eye,
-      description: "The first step in reducing cyber risk is understanding your complete attack surface. AcmeSecure automatically discovers and inventories all devices, users, applications, and access points across your environment.",
+      description: "The first step is understanding your organization's current state. For well-being, this means structured surveys covering mental, physical, stress, and financial dimensions. For security, this means evaluating device posture and policy compliance.",
       details: [
-        "Automated asset discovery across networks",
-        "User and identity mapping",
-        "Application inventory and dependency mapping",
-        "Cloud and on-premises environment coverage",
-        "Shadow IT identification",
+        "Structured survey deployment for well-being assessment",
+        "Mobile device security posture evaluation",
+        "User and device inventory across environments",
+        "Baseline establishment for improvement tracking",
+        "Privacy-compliant data collection",
       ],
-      visual: Search,
+      visual: ClipboardList,
     },
     {
       step: "02",
-      title: "Measure Exposure",
-      subtitle: "Continuous Assessment",
+      title: "Analyze",
+      subtitle: "Categorization & Insights",
       icon: Activity,
-      description: "Once assets are identified, AcmeSecure continuously assesses their security posture. We measure vulnerabilities, misconfigurations, and security gaps in real-time to give you accurate exposure metrics.",
+      description: "Once data is collected, AcmeSecure platforms analyze and categorize findings. Well-being responses are classified as Severe, Moderate, or Mild. Security findings are prioritized based on risk and policy alignment.",
       details: [
-        "Real-time vulnerability scanning",
-        "Configuration compliance checking",
-        "Risk scoring and prioritization",
-        "Trend analysis and reporting",
-        "Executive dashboards",
+        "Response categorization (Severe, Moderate, Mild)",
+        "Risk-based prioritization for security findings",
+        "Trend analysis and pattern identification",
+        "Aggregated dashboards for decision-makers",
+        "Clear reporting for program management",
       ],
       visual: BarChart3,
     },
     {
       step: "03",
-      title: "Reduce Risk",
-      subtitle: "Remediation & Control",
+      title: "Act",
+      subtitle: "Intervention & Enforcement",
       icon: Target,
-      description: "With clear visibility into your exposure, AcmeSecure provides actionable remediation guidance and policy enforcement tools to systematically reduce risk across your organization.",
+      description: "With clear insights, organizations can take targeted action. For well-being, this means directing support where needed. For security, this means enforcing policies and remediating issues.",
       details: [
-        "Prioritized remediation recommendations",
-        "Automated policy enforcement",
-        "Integration with ticketing systems",
-        "Progress tracking and verification",
-        "Continuous improvement metrics",
+        "Targeted well-being support recommendations",
+        "Security policy enforcement on devices",
+        "Program progress tracking and verification",
+        "Continuous improvement through iteration",
+        "Audit-ready documentation",
       ],
       visual: Shield,
     },
@@ -62,7 +62,7 @@ const HowItWorks = () => {
               How AcmeSecure Works
             </h1>
             <p className="text-lg md:text-xl text-slate-300 leading-relaxed">
-              A continuous, three-step approach to identifying, measuring, and reducing cyber risk across your organization. Simple in concept, powerful in execution.
+              A structured, three-step approach to assessing, analyzing, and acting on organizational well-being and security needs. Simple in concept, powerful in execution.
             </p>
           </div>
         </div>
@@ -125,7 +125,7 @@ const HowItWorks = () => {
                           {step.subtitle}
                         </p>
                         <p className="text-slate-400 text-sm">
-                          Continuous {step.title.toLowerCase()} across your environment
+                          {step.title} across your organization
                         </p>
                       </div>
                     </CardContent>
@@ -149,15 +149,15 @@ const HowItWorks = () => {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
             <h2 className="font-heading text-3xl md:text-4xl font-semibold text-slate-900 mb-4">
-              Continuous Cycle
+              Continuous Improvement
             </h2>
             <p className="text-lg text-slate-600 max-w-2xl mx-auto">
-              These three steps form a continuous cycle. As your environment changes and new threats emerge, AcmeSecure continuously identifies, measures, and helps reduce your cyber risk.
+              These three steps form a continuous cycle. As your organization evolves and new challenges emerge, AcmeSecure platforms continuously assess, analyze, and enable action.
             </p>
           </div>
 
           <div className="grid md:grid-cols-3 gap-8">
-            {steps.map((step, index) => (
+            {steps.map((step) => (
               <Card 
                 key={step.title}
                 className="bg-white border-slate-100 shadow-lg text-center"
@@ -186,7 +186,7 @@ const HowItWorks = () => {
             See It in Action
           </h2>
           <p className="text-lg text-slate-300 mb-8 max-w-2xl mx-auto">
-            Request a personalized demo to see how AcmeSecure's three-step approach can transform your security program.
+            Request a personalized demo to see how AcmeSecure's three-step approach can help your organization.
           </p>
           <Button asChild size="lg" className="bg-sky-500 hover:bg-sky-600 text-white accent-glow px-8">
             <Link to="/contact" data-testid="how-it-works-demo-btn">
