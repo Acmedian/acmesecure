@@ -91,7 +91,7 @@ const Aegis = () => {
               <img 
                 src="https://customer-assets.emergentagent.com/job_220fc9ab-b016-4ce4-812c-78cce458c17b/artifacts/txjx7h1z_aegis.png" 
                 alt="AcmeSecure Aegis" 
-                className="h-14 w-auto mb-6 brightness-0 invert"
+                className="h-14 w-auto mb-6"
               />
               <p className="text-sky-400 font-medium text-sm uppercase tracking-wider mb-6">
                 Mobile Security Enforcement Platform
