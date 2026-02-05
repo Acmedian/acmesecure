@@ -69,7 +69,7 @@ const Contact = () => {
 
     try {
       // await axios.post(`${API}/demo-request`, formData);
-      await axios.post("/api/request_handle.php", formData);
+      await axios.post("/acmesecure_api/request_handle.php", formData);
       setIsSubmitted(true);
       toast.success("Demo request submitted successfully!");
     } catch (error) {
