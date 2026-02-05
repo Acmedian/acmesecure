@@ -33,7 +33,7 @@ const ScrollToTop = () => {
 function App() {
   return (
     <div className="App min-h-screen flex flex-col">
-      <BrowserRouter>
+      <BrowserRouter basename="/acme">
         <ScrollToTop />
         <Header />
         <main className="flex-1">

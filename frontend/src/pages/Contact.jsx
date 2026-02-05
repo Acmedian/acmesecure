@@ -16,7 +16,8 @@ import { toast } from "sonner";
 import axios from "axios";
 
 const BACKEND_URL = process.env.REACT_APP_BACKEND_URL;
-const API = `${BACKEND_URL}/api`;
+// const API = `${BACKEND_URL}/api`;
+const API = `/api`;
 
 const Contact = () => {
   const [formData, setFormData] = useState({
@@ -67,7 +68,8 @@ const Contact = () => {
     setIsSubmitting(true);
 
     try {
-      await axios.post(`${API}/demo-request`, formData);
+      // await axios.post(`${API}/demo-request`, formData);
+      await axios.post("/api/request_handle.php", formData);
       setIsSubmitted(true);
       toast.success("Demo request submitted successfully!");
     } catch (error) {
