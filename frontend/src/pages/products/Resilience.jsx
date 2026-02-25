@@ -88,7 +88,7 @@ const Resilience = () => {
           </div>
           <div className="grid lg:grid-cols-2 gap-12 items-center">
             <div>
-              <img 
+              <img                 
                 src="https://customer-assets.emergentagent.com/job_220fc9ab-b016-4ce4-812c-78cce458c17b/artifacts/37ruae2w_resilience.png" 
                 alt="AcmeSecure Resilience" 
                 className="h-14 w-auto mb-6"
@@ -108,7 +108,8 @@ const Resilience = () => {
             </div>
             <div className="hidden lg:block">
               <img
-                src="https://images.unsplash.com/photo-1573497019940-1c28c88b4f3e?crop=entropy&cs=srgb&fm=jpg&q=85"
+                // src="https://images.unsplash.com/photo-1573497019940-1c28c88b4f3e?crop=entropy&cs=srgb&fm=jpg&q=85"
+                src="/acmesecure/images/resilience.jpg"
                 alt="Workforce Well-being"
                 className="rounded-xl shadow-2xl"
               />
@@ -116,7 +117,6 @@ const Resilience = () => {
           </div>
         </div>
       </section>
-
       {/* What Problems It Solves */}
       <section className="bg-white py-24 grid-texture" data-testid="resilience-problems">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -165,7 +165,111 @@ const Resilience = () => {
           </div>
         </div>
       </section>
+                                {/* Admin & User Gallery Section */}
+<section className="bg-slate-50 py-24" data-testid="aegis-admin-user-gallery">
+  <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    
+    <div className="text-center mb-16">
+      <h2 className="font-heading text-3xl md:text-4xl font-semibold text-slate-900 mb-4">
+        Resilience Platform Experience
+      </h2>
+      <p className="text-lg text-slate-600 max-w-2xl mx-auto">
+        Powerful administrative control with seamless end-user protection.
+      </p>
+    </div>
 
+    <div className="relative grid lg:grid-cols-2 gap-12 items-start">
+      
+      {/* Vertical Divider */}
+      <div className="hidden lg:block absolute left-1/2 top-0 bottom-0 w-px bg-slate-200 -translate-x-1/2"></div>
+
+      {/* ================= ADMIN SIDE ================= */}
+      <div className="space-y-6">
+        <h3 className="text-2xl font-semibold text-slate-900 text-center">
+          Admin Console
+        </h3>
+
+        <div className="grid sm:grid-cols-2 gap-6">
+          <div className="overflow-hidden rounded-xl shadow-lg group">
+            <img
+              src="/acmesecure/images/admin-d1.png"
+              alt="Admin Dashboard"
+              className="w-full h-64 object-cover group-hover:scale-105 transition-transform duration-500"
+            />
+          </div>
+
+          <div className="overflow-hidden rounded-xl shadow-lg group">
+            <img
+              src="/acmesecure/images/admin-d2.png"
+              alt="Admin Dashboard"
+              className="w-full h-64 object-cover group-hover:scale-105 transition-transform duration-500"
+            />
+          </div>
+        </div>
+
+        <div className="text-center pt-4">
+          {/* <a
+            href="#"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="inline-block bg-sky-500 hover:bg-sky-600 text-white px-6 py-3 rounded-lg font-medium transition-all duration-300"
+          >
+            Admin Login
+          </a> */}
+          <Button
+            type="button"
+            className="bg-sky-500 hover:bg-sky-600 text-white px-6 py-3"
+            >
+              Admin Login
+          </Button>
+        </div>
+      </div>
+
+      {/* ================= USER SIDE ================= */}
+      <div className="space-y-6">
+        <h3 className="text-2xl font-semibold text-slate-900 text-center">
+          User Experience
+        </h3>
+
+        <div className="grid sm:grid-cols-2 gap-6">
+          <div className="overflow-hidden rounded-xl shadow-lg group">
+            <img
+              src="/acmesecure/images/user-1.png"
+              alt="User Mobile App"
+              className="w-full h-64 object-cover group-hover:scale-105 transition-transform duration-500"
+            />
+          </div>
+
+          <div className="overflow-hidden rounded-xl shadow-lg group">
+            <img
+              src="/acmesecure/images/user-2.png"
+              alt="Mobile Protection"
+              className="w-full h-64 object-cover group-hover:scale-105 transition-transform duration-500"
+            />
+          </div>
+        </div>
+
+        <div className="text-center pt-4">
+          {/* <a
+            href="#"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="inline-block bg-slate-900 hover:bg-slate-800 text-white px-6 py-3 rounded-lg font-medium transition-all duration-300"
+          >
+            User Login
+          </a> */}
+          <Button
+            type="button"
+            className="bg-slate-900 hover:bg-slate-800 text-white px-6 py-3"
+            >
+              User Login
+            </Button>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
       {/* Core Capabilities */}
       <section className="bg-slate-50 py-24" data-testid="resilience-capabilities">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
